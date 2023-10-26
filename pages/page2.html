@@ -10,49 +10,57 @@
     <nav class="main-navigation">
         <div class="nav1"></div>
         <div class="nav2">
-            
             <div class="sidebar" id="sidebar">
                 <div id="logo">
-                    <img src="img/logo2.png" alt="">
+                    <img src="../img/logo2.png" alt="">
                 </div>
                 <div id="options">
                     <ul>
                         <li>
                             <i class="fa-solid fa-book fa-xs" style="color: #ffffff;"></i>
-                            <a href="index.html">Capa</a></li>
+                            <a href="../index.html">Capa</a></li>
                         <li>
                             <i class="fa-solid fa-book fa-xs"></i>
-                            <a href="./pages/page1.html">Introdução</a></li>
+                            <a href="./page1.html">Introdução</a></li>
                         <li>
                             <i class="fa-regular fa-clone fa-flip-vertical fa-xs" style="color: #ffffff;"></i>
-                            <a href="./pages/page2.html">pag2</a></li>
+                            <a href="./page2.html">pag2</a></li>
                         <li>
                             <i class="fa-regular fa-clone fa-flip-vertical fa-xs" style="color: #ffffff;"></i>
-                            <a href="./pages/page3.html">pag3</a></li>
+                            <a href="./page3.html">pag3</a></li>
                         <li>
                             <i class="fa-regular fa-bookmark fa-xs"></i>
                             <a href="#">Pag manutenção</a></li>
                     </ul>
                 </div>
             </div>
-            <img id="logo2" src="img/webclip.png" alt="">
+            <img id="logo2" src="../img/webclip.png" alt="">
             <div class="menu-button" id="menu-button" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars fa-xl"></i>
             </div>
         </div>
     </nav>
-    <header id="capa">
-        <h1><span class="underline">O que é Universidade?</span></h1>
-        
-        <a href="pages/page1.html" class="subtitle">
-            <h2>INÍCIO</h2>
-            <span></span>
-            <span></span>
-            <i class="fa-solid fa-play " style="color: rgb(255, 255, 255); margin-left: 3px;"></i>
-        </a>
-    </header>    
-    <script src="https://kit.fontawesome.com/dcb94aa444.js" crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
+    <header id="introducao">
+        <div class="capa">
+            <h1><span class="underline">Pag2</span></h1>
+        </div>
+    </header>
+    <div class="link_page2">
+        <a href="page1.html" class="subtitle_anterior">
+            <i class="fa-solid fa-play" style="color: rgb(27,101,156); margin-left: 3px; transform: scaleX(-1);"></i>
+            <span class="nav-icon"></span>
+            <span class="nav-icon"></span>
 
+            <h2>ANTERIOR</h2>
+        </a>
+            <span class="ponto"></span>
+        <a href="page3.html" class="subtitle_proximo">
+            <h2>PRÓXIMO</h2>
+            <span class="nav-icon"></span>
+            <span class="nav-icon"></span>
+            <i class="fa-solid fa-play" style="color: rgb(27,101,156); margin-left: 3px;"></i>
+        </a>
+    </div>
+    <script src="https://kit.fontawesome.com/dcb94aa444.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
 </body>
-</html>
