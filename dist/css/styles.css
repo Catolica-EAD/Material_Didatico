@@ -1,0 +1,345 @@
+@charset "UTF-8";
+@import url(../_partials/variables.scss);
+@font-face {
+  font-family: "Arboria";
+  src: url(../../src/font/Arboria-Book.ttf);
+}
+@font-face {
+  font-family: "verdanab";
+  src: url(../../src/font/verdanab.ttf);
+}
+@font-face {
+  font-family: Georgia;
+  src: url(../../src/font/georgiai.ttf);
+}
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+}
+.main-navigation .nav1 {
+  width: 100%;
+  min-height: 40px;
+  background-color: white;
+  z-index: 99;
+  position: fixed;
+  border-bottom: 7px solid rgb(32, 136, 201);
+}
+.main-navigation .nav2 {
+  display: flex;
+  /* background:radial-gradient(circle, rgb(1, 1, 94), rgb(229, 229, 233)); */
+  background-color: white;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 3%;
+  height: 24%;
+  border-bottom-right-radius: 20px;
+  z-index: 100;
+  font-family: sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.main-navigation .nav2 #logo2 {
+  max-width: 80%;
+  max-height: 80%;
+  padding-top: 20%;
+  transition: all 0.3s; /* Adicione uma transição suave para o tamanho */
+}
+@media (max-width: 768px) {
+  .main-navigation .nav2 #logo2 {
+    max-width: 60%; /* Reduza a largura em telas pequenas */
+    max-height: 60%; /* Reduza a altura em telas pequenas */
+    padding-top: 10%; /* Ajuste o espaçamento superior em telas pequenas */
+  }
+}
+.main-navigation .nav2 .menu-button {
+  cursor: pointer;
+  color: #333;
+  margin-bottom: 70%;
+  font-size: 1rem; /* Tamanho de fonte padrão */
+  transition: all 0.3s; /* Adicione uma transição suave para o tamanho */
+}
+.main-navigation .nav2 #sidebar {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.main-navigation .nav2 #sidebar ul {
+  margin-left: 20px;
+  list-style-type: none;
+}
+.main-navigation .nav2 #sidebar #logo {
+  text-align: center;
+  margin-top: 20px;
+}
+.main-navigation .nav2 #sidebar #options li {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.main-navigation .nav2 #sidebar #options li i {
+  padding-right: 10px;
+}
+.main-navigation .nav2 #sidebar #options li a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#introducao {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  height: 40vh;
+  margin-top: 40px;
+}
+#introducao .capa {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  background-image: url(../../src/img/Imagem.png);
+  background-repeat: no-repeat;
+  background-position: auto;
+  background-size: cover;
+  justify-content: space-between;
+  height: 100vh;
+}
+#introducao .capa h1 {
+  font-family: "Arboria";
+  font-size: 50px;
+  margin-left: 100px;
+  z-index: 3;
+  color: white;
+}
+#introducao .capa h1 .underline {
+  display: inline-block;
+  border-bottom: 2px solid rgb(134, 173, 201);
+  padding-bottom: 5px;
+}
+#introducao .curve::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 10% 20% 100% 110%;
+  width: 170%;
+  height: 50%;
+  background-color: white;
+  transform: translate(-41%, -20%);
+}
+
+.introducao_main_text {
+  display: flex;
+  justify-content: center;
+}
+.introducao_main_text section {
+  width: 80%;
+  flex-direction: column;
+}
+.introducao_main_text section p {
+  font-size: 20px;
+  font-family: "Georgia";
+  font-weight: 500;
+  line-height: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+.link_page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link_page1 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: rgb(27, 101, 156);
+}
+.link_page1 h2 {
+  font-family: "verdanab";
+}
+.link_page1 .nav-icon {
+  margin-top: 1px;
+  padding-left: 3px;
+  height: 18px;
+  border-right: 3px solid rgb(27, 101, 156);
+}
+.link_page1 .fa-solid.fa-play {
+  margin-top: 3px;
+  font-size: 20px;
+  color: rgb(27, 101, 156);
+}
+.link_page1 .ponto {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%; /* Define a forma do elemento como um círculo */
+  margin-top: 10px;
+}
+.link_page1 .subtitle_anterior {
+  margin-right: 30px;
+}
+.link_page1 .subtitle_anterior h2 {
+  margin-left: 12px;
+}
+.link_page1 .subtitle_proximo {
+  margin-left: 30px;
+}
+.link_page1 .subtitle_proximo h2 {
+  margin-right: 12px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  align-items: center;
+  color: rgb(27, 101, 156);
+  border-top: 5px rgb(32, 136, 201) solid;
+  height: 5vh;
+  background-color: rgb(210, 217, 219);
+}
+
+.link_page2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link_page2 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: rgb(27, 101, 156);
+}
+.link_page2 h2 {
+  font-family: "verdanab";
+}
+.link_page2 .nav-icon {
+  margin-top: 1px;
+  padding-left: 3px;
+  height: 18px;
+  border-right: 3px solid rgb(27, 101, 156);
+}
+.link_page2 .fa-solid.fa-play {
+  margin-top: 3px;
+  font-size: 20px;
+  color: rgb(27, 101, 156);
+}
+.link_page2 .ponto {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%; /* Define a forma do elemento como um círculo */
+  margin-top: 10px;
+}
+.link_page2 .subtitle_anterior {
+  margin-right: 30px;
+}
+.link_page2 .subtitle_anterior h2 {
+  margin-left: 12px;
+}
+.link_page2 .subtitle_proximo {
+  margin-left: 30px;
+}
+.link_page2 .subtitle_proximo h2 {
+  margin-right: 12px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+#capa {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../src/img/Imagem.png);
+  background-repeat: no-repeat;
+  background-position: auto;
+  background-size: cover;
+  justify-content: center;
+  /* Adicione a cor de fundo à frente das outras imagens */
+}
+#capa::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../src/img/Grafismo.png);
+  background-repeat: no-repeat;
+  background-position: auto;
+  background-size: cover;
+  z-index: 2; /* Coloca a imagem do efeito à frente da imagem de fundo */
+}
+#capa::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../src/img/Cor.png);
+  background-repeat: no-repeat;
+  background-position: auto;
+  background-size: cover;
+  z-index: 1; /* Coloca a cor de fundo à frente de tudo */
+}
+#capa h1 {
+  font-family: "Arboria";
+  font-size: 70px;
+  margin-left: 100px;
+  z-index: 3;
+}
+#capa h1 .underline {
+  display: inline-block;
+  border-bottom: 2px solid rgb(134, 173, 201);
+  padding-bottom: 5px;
+}
+#capa .subtitle {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  z-index: 3;
+  text-decoration: none;
+  color: white;
+  font-size: 21px;
+}
+#capa .subtitle h2 {
+  margin-left: 100px;
+  margin-right: 10px;
+  font-family: "verdanab";
+}
+#capa .subtitle span {
+  padding-left: 3px;
+  height: 20px;
+  border-right: 3px solid white;
+}
+
+/*# sourceMappingURL=styles.css.map */

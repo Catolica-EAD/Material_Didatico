@@ -1,0 +1,12 @@
+@mixin custom-h1($font-family, $font-size, $margin-left, $underline-color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    margin-left: $margin-left;
+
+    .underline {
+        display: inline-block;
+        border-bottom: 2px solid $underline-color;
+        padding-bottom: 5px;
+    }
+}
+

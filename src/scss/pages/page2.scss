@@ -1,0 +1,47 @@
+.link_page2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        text-decoration: none;
+        color: $second-color;
+    }
+    
+    h2{
+        font-family: $subtitle;
+    }
+    .nav-icon{
+        margin-top: 1px;
+        padding-left: 3px;
+        height: 18px;
+        border-right: 3px solid $second-color;
+    }
+    .fa-solid.fa-play {
+        margin-top: 3px;
+        font-size: 20px;
+        color: rgb(27,101,156);
+    }
+    .ponto {
+        width: 10px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 50%; /* Define a forma do elemento como um círculo */
+        margin-top: 10px;
+    }
+    .subtitle_anterior{
+        margin-right: 30px;
+        h2{
+            margin-left: 12px;
+        }
+    }
+    .subtitle_proximo{
+        margin-left: 30px;
+        h2{
+            margin-right: 12px;
+        }
+    }
+}
