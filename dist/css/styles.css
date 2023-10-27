@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(../_partials/variables.scss);
 @import './pages/page3.css';
 @font-face {
   font-family: "Arboria";
