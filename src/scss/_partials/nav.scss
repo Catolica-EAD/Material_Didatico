@@ -35,13 +35,6 @@
             max-height: 80%;
             padding-top: 20%;
             transition: all 0.3s; /* Adicione uma transição suave para o tamanho */
-        
-            @media (max-width: 768px) {
-                max-width: 60%; /* Reduza a largura em telas pequenas */
-                max-height: 60%; /* Reduza a altura em telas pequenas */
-                padding-top: 10%; /* Ajuste o espaçamento superior em telas pequenas */
-            }
-
         }
 
         .menu-button {
@@ -91,3 +84,91 @@
     }
 }
 
+@media(max-width: 768px){
+    .main-navigation {
+        display: flex;
+        flex-direction: row;
+    
+        .nav1 {
+            width: 100%;
+            min-height: 40px;
+            background-color: white;
+            z-index: 99;
+            position: fixed;
+            border-bottom: 7px solid rgb(32,136,201);
+        }
+    
+        .nav2 {
+            display: flex;
+            /* background:radial-gradient(circle, rgb(1, 1, 94), rgb(229, 229, 233)); */
+            background-color: white;
+            position: fixed;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            width: 10%;
+            height: 20%;
+            border-bottom-right-radius: 20px;
+            z-index: 100
+                /* to guarantee that nav element stay above of another elements */
+            ;
+            font-family: sans-serif;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+    
+            #logo2 {
+                width: 60%;
+                height: 40%;
+                padding-top: 20%;
+                transition: all 0.3s; /* Adicione uma transição suave para o tamanho */
+    
+            }
+    
+            .menu-button {
+                cursor: pointer;
+                color: #333;
+                margin-bottom: 70%;
+                font-size: 1.0rem; /* Tamanho de fonte padrão */
+                transition: all 0.3s; /* Adicione uma transição suave para o tamanho */
+            }
+    
+            #sidebar {
+                width: 0;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #333;
+                overflow-x: hidden;
+                transition: 0.5s;
+    
+                ul {
+                    margin-left: 20px;
+                    list-style-type: none;
+                }
+    
+                #logo {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+    
+                #options {
+                    li {
+                        margin-top: 25px;
+                        margin-bottom: 25px;
+    
+                        i {
+                            padding-right: 10px;
+                        }
+    
+                        a {
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -47,13 +47,6 @@
   padding-top: 20%;
   transition: all 0.3s; /* Adicione uma transição suave para o tamanho */
 }
-@media (max-width: 768px) {
-  .main-navigation .nav2 #logo2 {
-    max-width: 60%; /* Reduza a largura em telas pequenas */
-    max-height: 60%; /* Reduza a altura em telas pequenas */
-    padding-top: 10%; /* Ajuste o espaçamento superior em telas pequenas */
-  }
-}
 .main-navigation .nav2 .menu-button {
   cursor: pointer;
   color: #333;
@@ -91,6 +84,79 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .main-navigation {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-navigation .nav1 {
+    width: 100%;
+    min-height: 40px;
+    background-color: white;
+    z-index: 99;
+    position: fixed;
+    border-bottom: 7px solid rgb(32, 136, 201);
+  }
+  .main-navigation .nav2 {
+    display: flex;
+    /* background:radial-gradient(circle, rgb(1, 1, 94), rgb(229, 229, 233)); */
+    background-color: white;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 20%;
+    border-bottom-right-radius: 20px;
+    z-index: 100;
+    font-family: sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  .main-navigation .nav2 #logo2 {
+    width: 60%;
+    height: 40%;
+    padding-top: 20%;
+    transition: all 0.3s; /* Adicione uma transição suave para o tamanho */
+  }
+  .main-navigation .nav2 .menu-button {
+    cursor: pointer;
+    color: #333;
+    margin-bottom: 70%;
+    font-size: 1rem; /* Tamanho de fonte padrão */
+    transition: all 0.3s; /* Adicione uma transição suave para o tamanho */
+  }
+  .main-navigation .nav2 #sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  .main-navigation .nav2 #sidebar ul {
+    margin-left: 20px;
+    list-style-type: none;
+  }
+  .main-navigation .nav2 #sidebar #logo {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .main-navigation .nav2 #sidebar #options li {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .main-navigation .nav2 #sidebar #options li i {
+    padding-right: 10px;
+  }
+  .main-navigation .nav2 #sidebar #options li a {
+    text-decoration: none;
+    color: white;
+  }
+}
 body {
   overflow-x: hidden;
 }
@@ -272,74 +338,150 @@ body {
   position: relative;
 }
 
-#capa {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  width: 100%;
-  height: 100vh;
-  background-image: url(../../src/img/Imagem.png);
-  background-repeat: no-repeat;
-  background-position: auto;
-  background-size: cover;
-  justify-content: center;
-  /* Adicione a cor de fundo à frente das outras imagens */
+@media (min-width: 769px) {
+  /* Coloque seus estilos para desktop aqui */
+  #capa {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../src/img/Imagem.png);
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-size: cover;
+    justify-content: center;
+    /* Adicione a cor de fundo à frente das outras imagens */
+  }
+  #capa::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../src/img/Grafismo.png);
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-size: cover;
+    z-index: 2; /* Coloca a imagem do efeito à frente da imagem de fundo */
+  }
+  #capa::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../src/img/Cor.png);
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-size: cover;
+    z-index: 1; /* Coloca a cor de fundo à frente de tudo */
+  }
+  #capa h1 {
+    font-family: "Arboria";
+    font-size: 70px;
+    margin-left: 100px;
+    z-index: 3;
+  }
+  #capa h1 .underline {
+    display: inline-block;
+    border-bottom: 2px solid rgb(134, 173, 201);
+    padding-bottom: 5px;
+  }
+  #capa .subtitle {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    z-index: 3;
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+  }
+  #capa .subtitle h2 {
+    margin-left: 100px;
+    margin-right: 10px;
+    font-family: "verdanab";
+  }
+  #capa .subtitle span {
+    padding-left: 3px;
+    height: 20px;
+    border-right: 3px solid white;
+  }
 }
-#capa::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../src/img/Grafismo.png);
-  background-repeat: no-repeat;
-  background-position: auto;
-  background-size: cover;
-  z-index: 2; /* Coloca a imagem do efeito à frente da imagem de fundo */
-}
-#capa::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../src/img/Cor.png);
-  background-repeat: no-repeat;
-  background-position: auto;
-  background-size: cover;
-  z-index: 1; /* Coloca a cor de fundo à frente de tudo */
-}
-#capa h1 {
-  font-family: "Arboria";
-  font-size: 70px;
-  margin-left: 100px;
-  z-index: 3;
-}
-#capa h1 .underline {
-  display: inline-block;
-  border-bottom: 2px solid rgb(134, 173, 201);
-  padding-bottom: 5px;
-}
-#capa .subtitle {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  z-index: 3;
-  text-decoration: none;
-  color: white;
-  font-size: 21px;
-}
-#capa .subtitle h2 {
-  margin-left: 100px;
-  margin-right: 10px;
-  font-family: "verdanab";
-}
-#capa .subtitle span {
-  padding-left: 3px;
-  height: 20px;
-  border-right: 3px solid white;
+@media (max-width: 768px) {
+  #capa {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../src/img/Imagem.png);
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    /* Adicione a cor de fundo à frente das outras imagens */
+  }
+  #capa::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../src/img/Grafismo.png);
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-size: cover;
+    z-index: 2; /* Coloca a imagem do efeito à frente da imagem de fundo */
+  }
+  #capa::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../src/img/Cor.png);
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-size: cover;
+    z-index: 1; /* Coloca a cor de fundo à frente de tudo */
+  }
+  #capa h1 {
+    font-family: "Arboria";
+    font-size: 30px;
+    margin-left: 0px;
+    /* Reduzi o tamanho da fonte para 30px */
+    line-height: 1.2; /* Reduzi o espaçamento interlinear (opcional) */
+    z-index: 3;
+  }
+  #capa h1 .underline {
+    display: inline-block;
+    border-bottom: 2px solid rgb(134, 173, 201);
+    padding-bottom: 5px;
+  }
+  #capa .subtitle {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    z-index: 3;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+  }
+  #capa .subtitle h2 {
+    margin-right: 10px;
+    font-family: "verdanab";
+  }
+  #capa .subtitle span {
+    padding-left: 3px;
+    height: 15px;
+    border-right: 3px solid white;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

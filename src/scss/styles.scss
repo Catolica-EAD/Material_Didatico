@@ -34,74 +34,151 @@ body{
     position: relative;
 }
 
-#capa{
-    display: flex;
-    flex-direction: column;
-    color: $primary-color;
-    width: 100%;
-    height: 100vh;
-    background-image: $capa;
-    background-repeat: no-repeat;
-    background-position: auto;
-    background-size: cover;
-    justify-content: center;
 
-    //Adicionar o Gafrismo
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: $efeito;
-        background-repeat: no-repeat;
-        background-position: auto;
-        background-size: cover;
-        z-index: 2; /* Coloca a imagem do efeito à frente da imagem de fundo */
-    }
 
-    /* Adicione a cor de fundo à frente das outras imagens */
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: $corFundo;
-        background-repeat: no-repeat;
-        background-position: auto;
-        background-size: cover;
-        z-index: 1; /* Coloca a cor de fundo à frente de tudo */
-    }
-    
-
-    h1{
-        @include custom-h1($title, 70px, 100px, rgb(134, 173, 201));   
-        z-index: 3;
-    }
-
-    .subtitle{
+@media (min-width: 769px) {
+    /* Coloque seus estilos para desktop aqui */
+    #capa{
         display: flex;
-        align-items: center;
-        margin-top: 10px;
-        z-index: 3;
-        text-decoration: none;
-        color: white;
-        font-size: 21px;
-        
-        h2{
-            margin-left: 100px;
-            margin-right: 10px;
-            font-family: $subtitle;
+        flex-direction: column;
+        color: $primary-color;
+        width: 100%;
+        height: 100vh;
+        background-image: $capa;
+        background-repeat: no-repeat;
+        background-position: auto;
+        background-size: cover;
+        justify-content: center;
+    
+        //Adicionar o Gafrismo
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: $efeito;
+            background-repeat: no-repeat;
+            background-position: auto;
+            background-size: cover;
+            z-index: 2; /* Coloca a imagem do efeito à frente da imagem de fundo */
         }
-        span{
-            padding-left: 3px;
-            height: 20px;
-            border-right: 3px solid $primary-color;
+    
+        /* Adicione a cor de fundo à frente das outras imagens */
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: $corFundo;
+            background-repeat: no-repeat;
+            background-position: auto;
+            background-size: cover;
+            z-index: 1; /* Coloca a cor de fundo à frente de tudo */
+        }
+        
+    
+        h1{
+            @include custom-h1($title, 70px, 100px, rgb(134, 173, 201));   
+            z-index: 3;
+        }
+    
+        .subtitle{
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            z-index: 3;
+            text-decoration: none;
+            color: white;
+            font-size: 21px;
+            
+            h2{
+                margin-left: 100px;
+                margin-right: 10px;
+                font-family: $subtitle;
+            }
+            span{
+                padding-left: 3px;
+                height: 20px;
+                border-right: 3px solid $primary-color;
+            }
         }
     }
 }
 
-
+@media (max-width: 768px) {
+    //Mobile
+    #capa{
+        display: flex;
+        flex-direction: column;
+        color: $primary-color;
+        width: 100%;
+        height: 100vh;
+        background-image: $capa;
+        background-repeat: no-repeat;
+        background-position: auto;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+    
+        //Adicionar o Gafrismo
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: $efeito;
+            background-repeat: no-repeat;
+            background-position: auto;
+            background-size: cover;
+            z-index: 2; /* Coloca a imagem do efeito à frente da imagem de fundo */
+        }
+    
+        /* Adicione a cor de fundo à frente das outras imagens */
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: $corFundo;
+            background-repeat: no-repeat;
+            background-position: auto;
+            background-size: cover;
+            z-index: 1; /* Coloca a cor de fundo à frente de tudo */
+        }
+        
+    
+        h1 {
+            @include custom-h1($title, 30px, 0px, rgb(134, 173, 201));  /* Reduzi o tamanho da fonte para 30px */
+            line-height: 1.2; /* Reduzi o espaçamento interlinear (opcional) */
+            z-index: 3;
+        }
+    
+        .subtitle{
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            z-index: 3;
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            
+            h2{
+                margin-right: 10px;
+                font-family: $subtitle;
+            }
+            span{
+                padding-left: 3px;
+                height: 15px;
+                border-right: 3px solid $primary-color;
+            }
+        }
+    }
+}
