@@ -1,16 +1,17 @@
 @charset "UTF-8";
 @import url(../_partials/variables.scss);
+@import './pages/page3.css';
 @font-face {
   font-family: "Arboria";
-  src: url(../../src/font/Arboria-Book.ttf);
+  src: url(../font/Arboria-Book.ttf);
 }
 @font-face {
   font-family: "verdanab";
-  src: url(../../src/font/verdanab.ttf);
+  src: url(../font/verdanab.ttf);
 }
 @font-face {
   font-family: Georgia;
-  src: url(../../src/font/georgiai.ttf);
+  src: url(../font/georgiai.ttf);
 }
 .main-navigation {
   display: flex;
