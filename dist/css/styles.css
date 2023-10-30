@@ -21,7 +21,7 @@
   background-color: white;
   z-index: 99;
   position: fixed;
-  border-bottom: 7px solid rgb(27, 101, 156);
+  border-bottom: 7px solid rgb(32, 136, 201);
 }
 .main-navigation .nav2 {
   display: flex;

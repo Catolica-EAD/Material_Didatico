@@ -172,7 +172,7 @@ body.contraste img {
 }
 
 
-body.dark-mode, body.dark-mode.titulo, body.dark-mode.barra-acessibilidade, body.dark-mode.menu a, body.dark-mode.barra-acessibilidade span, body.dark.mode.conteudo{
+body.dark-mode, body.dark-mode .titulo, body.dark-mode.barra-acessibilidade, body.dark-mode.menu a, body.dark-mode.barra-acessibilidade span, body.dark.mode.conteudo{
     color: gray;
   }
   body.dark-mode {

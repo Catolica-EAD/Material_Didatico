@@ -8,7 +8,24 @@
 </head>
 <body>
     <nav class="main-navigation">
-        <div class="nav1"></div>
+        <div class="nav1">
+            <div class="barra-acessibilidade">
+                <button class="botao-menu" onclick="toggleMenu()" style="justify-content: flex-start;"></button>
+                <div class="elementos-direita">
+                  <scan class="imprimir-icon" onclick="imprimirPagina()">🖨️</scan>
+                  <button id="abrir-toolbar" onclick="abrirToolbar()"> <i class="fa-solid fa-universal-access "
+                    style="color: rgb(108, 157, 231);"></i></button>
+            </div>
+            <div class="toolbar hidden">
+                <button id="aumentar-fonte" onclick="aumentarFonte()"><i class="fas fa-search-plus"></i></button>
+                <button id="reduzir-fonte" onclick="reduzirFonte()"><i class="fas fa-search-minus"></i></button>
+                <button id="destacar-texto" onclick="alternarMarcaTexto()"><i class="fas fa-highlighter"></i></button>
+                <button onclick="toggleContrast()"><i class="fa-regular fa-sun"></i></button>
+                <button><i class="fa-solid fa-volume-high"></i></button>
+                <button onclick="toggleDarkMode()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+              </div>
+            </div>
+        </div>
         <div class="nav2">
             
             <div class="sidebar" id="sidebar">
@@ -19,19 +36,24 @@
                     <ul>
                         <li>
                             <i class="fa-solid fa-book fa-xs" style="color: #ffffff;"></i>
-                            <a href="index.html">Capa</a></li>
+                            <a href="index.html">Capa</a>
+                        </li>
                         <li>
                             <i class="fa-solid fa-book fa-xs"></i>
-                            <a href="./pages/page1.html">Introdução</a></li>
+                            <a href="./pages/page1.html">Introdução</a>
+                        </li>
                         <li>
                             <i class="fa-regular fa-clone fa-flip-vertical fa-xs" style="color: #ffffff;"></i>
-                            <a href="./pages/page2.html">pag2</a></li>
+                            <a href="./pages/page2.html">pag2</a>
+                        </li>
                         <li>
                             <i class="fa-regular fa-clone fa-flip-vertical fa-xs" style="color: #ffffff;"></i>
-                            <a href="./pages/page3.html">pag3</a></li>
+                            <a href="./pages/page3.html">pag3</a>
+                        </li>
                         <li>
                             <i class="fa-regular fa-bookmark fa-xs"></i>
-                            <a href="#">Pag manutenção</a></li>
+                            <a href="#">Pag manutenção</a>
+                        </li>
                     </ul>
                 </div>
             </div>

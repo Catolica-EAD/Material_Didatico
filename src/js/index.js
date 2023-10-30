@@ -17,10 +17,6 @@ document.addEventListener("click", function(event) {
     }
 });
 
-function toggleMenu() {
-  var menu = document.querySelector('.menu');
-  menu.classList.toggle('mostrar');
-}
 
 function imprimirPagina() {
   window.print();
