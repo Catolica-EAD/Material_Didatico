@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import './pages/page3.css';
 @font-face {
   font-family: "Arboria";
   src: url(../font/Arboria-Book.ttf);
@@ -22,7 +21,7 @@
   background-color: white;
   z-index: 99;
   position: fixed;
-  border-bottom: 7px solid rgb(32, 136, 201);
+  border-bottom: 7px solid rgb(27, 101, 156);
 }
 .main-navigation .nav2 {
   display: flex;
@@ -157,6 +156,83 @@
     color: white;
   }
 }
+.link_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  bottom: 50px; /* Ajuste a posição vertical conforme necessário */
+}
+.link_page a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: rgb(27, 101, 156);
+}
+.link_page h2 {
+  font-family: "verdanab";
+}
+.link_page .nav-icon {
+  margin-top: 1px;
+  padding-left: 3px;
+  height: 18px;
+  border-right: 3px solid rgb(27, 101, 156);
+}
+.link_page .anterior {
+  color: rgb(27, 101, 156);
+  margin-top: 3px;
+  font-size: 20px;
+  transform: scaleX(-1);
+}
+.link_page .proximo {
+  color: rgb(27, 101, 156);
+  margin-top: 3px;
+  margin-left: 3px;
+  font-size: 20px;
+}
+.link_page .ponto {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%; /* Define a forma do elemento como um círculo */
+  margin-top: 10px;
+}
+.link_page .subtitle_anterior {
+  margin-right: 30px;
+}
+.link_page .subtitle_anterior h2 {
+  margin-left: 12px;
+}
+.link_page .subtitle_proximo {
+  margin-left: 30px;
+}
+.link_page .subtitle_proximo h2 {
+  margin-right: 12px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  align-items: center;
+  color: rgb(27, 101, 156);
+  border-top: 5px solid rgb(27, 101, 156);
+  height: 5vh;
+  background-color: rgb(210, 217, 219);
+}
+footer svg {
+  margin-right: 2px;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -192,16 +268,6 @@ body {
   border-bottom: 2px solid rgb(134, 173, 201);
   padding-bottom: 5px;
 }
-#introducao .curve::before {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 10% 20% 100% 110%;
-  width: 170%;
-  height: 50%;
-  background-color: white;
-  transform: translate(-41%, -20%);
-}
 
 .introducao_main_text {
   display: flex;
@@ -217,115 +283,6 @@ body {
   font-weight: 500;
   line-height: 1.5em;
   margin-bottom: 1.2em;
-}
-
-.link_page1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.link_page1 a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  text-decoration: none;
-  color: rgb(27, 101, 156);
-}
-.link_page1 h2 {
-  font-family: "verdanab";
-}
-.link_page1 .nav-icon {
-  margin-top: 1px;
-  padding-left: 3px;
-  height: 18px;
-  border-right: 3px solid rgb(27, 101, 156);
-}
-.link_page1 .fa-solid.fa-play {
-  margin-top: 3px;
-  font-size: 20px;
-  color: rgb(27, 101, 156);
-}
-.link_page1 .ponto {
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  border-radius: 50%; /* Define a forma do elemento como um círculo */
-  margin-top: 10px;
-}
-.link_page1 .subtitle_anterior {
-  margin-right: 30px;
-}
-.link_page1 .subtitle_anterior h2 {
-  margin-left: 12px;
-}
-.link_page1 .subtitle_proximo {
-  margin-left: 30px;
-}
-.link_page1 .subtitle_proximo h2 {
-  margin-right: 12px;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: 14px;
-  align-items: center;
-  color: rgb(27, 101, 156);
-  border-top: 5px rgb(32, 136, 201) solid;
-  height: 5vh;
-  background-color: rgb(210, 217, 219);
-}
-
-.link_page2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.link_page2 a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  text-decoration: none;
-  color: rgb(27, 101, 156);
-}
-.link_page2 h2 {
-  font-family: "verdanab";
-}
-.link_page2 .nav-icon {
-  margin-top: 1px;
-  padding-left: 3px;
-  height: 18px;
-  border-right: 3px solid rgb(27, 101, 156);
-}
-.link_page2 .fa-solid.fa-play {
-  margin-top: 3px;
-  font-size: 20px;
-  color: rgb(27, 101, 156);
-}
-.link_page2 .ponto {
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  border-radius: 50%; /* Define a forma do elemento como um círculo */
-  margin-top: 10px;
-}
-.link_page2 .subtitle_anterior {
-  margin-right: 30px;
-}
-.link_page2 .subtitle_anterior h2 {
-  margin-left: 12px;
-}
-.link_page2 .subtitle_proximo {
-  margin-left: 30px;
-}
-.link_page2 .subtitle_proximo h2 {
-  margin-right: 12px;
 }
 
 * {
@@ -408,6 +365,10 @@ body {
     padding-left: 3px;
     height: 20px;
     border-right: 3px solid white;
+  }
+  #capa .subtitle .fa-play {
+    margin-left: 3px;
+    color: white;
   }
 }
 @media (max-width: 768px) {

@@ -1,22 +1,55 @@
-var sidebar = document.getElementById("sidebar");
-var icon = document.getElementById("menu-button");
-var content = document.querySelector(".content");
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capa com Imagem de Fundo, Menu Escondido e Barra de Acessibilidade</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body> 
+  <div class="barra-acessibilidade">
+      <button class="botao-menu" onclick="toggleMenu()" style="justify-content: flex-start;"></button>
+      <div class="elementos-direita">
+        <scan class="imprimir-icon" onclick="imprimirPagina()">🖨️</scan>
+        <button id="abrir-toolbar" onclick="abrirToolbar()"> <i class="fa-solid fa-universal-access "
+          style="color: rgb(108, 157, 231);"></i></button>
+      </div>
+    <div class="toolbar hidden">
+      <button id="aumentar-fonte" onclick="aumentarFonte()"><i class="fas fa-search-plus"></i></button>
+      <button id="reduzir-fonte" onclick="reduzirFonte()"><i class="fas fa-search-minus"></i></button>
+      <button id="destacar-texto" onclick="alternarMarcaTexto()"><i class="fas fa-highlighter"></i></button>
+      <button onclick="toggleContrast()"><i class="fa-regular fa-sun"></i></button>
+      <button><i class="fa-solid fa-volume-high"></i></button>
+      <button onclick="toggleDarkMode()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+    </div>
+    </div>
+<div class="menu">
 
-function toggleMenu() { // Abrir sidebar
-    sidebar.style.width = "250px";
-}
+    <img src="logo.png" alt="Logo">
+    <a href="#">Início</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviços</a>
+    <a href="#">Contato</a>
+</div>
+<div class="capa">
+    <h1 class="titulo">Título da Capa</h1>
+</div>
+<div class="conteudo">
+    <h1>TESTE</h1>
+    <p>Nesta Unidade, vamos analisar o conceito da Administração de Materiais pautada no campo de atuação da disciplina em termos empresariais, no intuito de fundamentar teoricamente nossos estudos sobre o tema.</p>
+    <p>Apresentaremos, também, algumas abordagens integrativas correlacionando com outras áreas e demonstrando a relevância do estudo. Na sequência, abordaremos alguns aspectos fundamentais dos estoques, bem como seus métodos de análise e controle, eficazes para o alcance do sucesso empresarial.</p>
+    <p>Por fim, trataremos dos principais métodos contábeis de avaliação por meio de uma apresentação de ferramentas práticas validadas no ambiente acadêmico e as mais usuais do meio empresarial.</p>
+</div> 
+<img src="imagem1.png" alt="imagem">
+<br>
+<br>
+<br>
+<br>
+<hr>
+<br>
 
-document.addEventListener("click", function(event) {
-    // Verificar se a sidebar está aberta
-    if (sidebar.style.width == "250px") {
-        // Verificar se o clique não está dentro da sidebar nem no ícone
-        if (!(sidebar.contains(event.target) || icon.contains(event.target))) {
-            // Se o clique estiver fora da sidebar e do ícone, oculte a sidebar
-            sidebar.style.width = "0";
-        }
-    }
-});
-
+<script>
 function toggleMenu() {
   var menu = document.querySelector('.menu');
   menu.classList.toggle('mostrar');
@@ -100,3 +133,7 @@ function abrirToolbar() {
         toolbar.style.display = 'none';
     }
 }
+</script>    
+<script src="https://kit.fontawesome.com/dcd94aa444.js" crossorigin="anonymous"></script>
+</body>
+</html>

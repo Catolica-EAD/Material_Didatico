@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../dist/css/styles.css">
     <title>EAD</title>
 </head>
+
 <body>
     <nav class="main-navigation">
         <div class="nav1"></div>
@@ -18,19 +20,24 @@
                     <ul>
                         <li>
                             <i class="fa-solid fa-book fa-xs" style="color: #ffffff;"></i>
-                            <a href="../index.html">Capa</a></li>
+                            <a href="../index.html">Capa</a>
+                        </li>
                         <li>
                             <i class="fa-solid fa-book fa-xs"></i>
-                            <a href="./page1.html">Introdução</a></li>
+                            <a href="./page1.html">Introdução</a>
+                        </li>
                         <li>
                             <i class="fa-regular fa-clone fa-flip-vertical fa-xs" style="color: #ffffff;"></i>
-                            <a href="./page2.html">pag2</a></li>
+                            <a href="./page2.html">pag2</a>
+                        </li>
                         <li>
                             <i class="fa-regular fa-clone fa-flip-vertical fa-xs" style="color: #ffffff;"></i>
-                            <a href="./page3.html">pag3</a></li>
+                            <a href="./page3.html">pag3</a>
+                        </li>
                         <li>
                             <i class="fa-regular fa-bookmark fa-xs"></i>
-                            <a href="#">Pag manutenção</a></li>
+                            <a href="#">Pag manutenção</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -40,27 +47,38 @@
             </div>
         </div>
     </nav>
+
     <header id="introducao">
         <div class="capa">
             <h1><span class="underline">Pag2</span></h1>
         </div>
     </header>
-    <div class="link_page2">
-        <a href="page1.html" class="subtitle_anterior">
-            <i class="fa-solid fa-play" style="color: rgb(27,101,156); margin-left: 3px; transform: scaleX(-1);"></i>
-            <span class="nav-icon"></span>
-            <span class="nav-icon"></span>
 
+    <div class="link_page">
+        <a href="page1.html" class="subtitle_anterior">
+            <i class="fa-solid fa-play anterior"></i>
+            <span class="nav-icon"></span>
+            <span class="nav-icon"></span>
             <h2>ANTERIOR</h2>
         </a>
-            <span class="ponto"></span>
+        <span class="ponto"></span>
         <a href="page3.html" class="subtitle_proximo">
             <h2>PRÓXIMO</h2>
             <span class="nav-icon"></span>
             <span class="nav-icon"></span>
-            <i class="fa-solid fa-play" style="color: rgb(27,101,156); margin-left: 3px;"></i>
+            <i class="fa-solid fa-play proximo"></i>
         </a>
     </div>
+
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle"
+            viewBox="0 0 16 16">
+            <path
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z" />
+        </svg>
+        <p>Católica EAD - Todos direitos reservados.</p>
+    </footer>
+
     <script src="https://kit.fontawesome.com/dcb94aa444.js" crossorigin="anonymous"></script>
     <script src="../js/index.js"></script>
 </body>

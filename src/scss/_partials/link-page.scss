@@ -1,0 +1,63 @@
+.link_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    bottom: 50px; /* Ajuste a posição vertical conforme necessário */
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      text-decoration: none;
+      color: $second-color; // Substitua pela variável de cor desejada
+    }
+  
+    h2 {
+      font-family: $subtitle; // Substitua pela variável de fonte desejada
+    }
+    .nav-icon {
+      margin-top: 1px;
+      padding-left: 3px;
+      height: 18px;
+      border-right: 3px solid $second-color; // Substitua pela variável de cor desejada
+    }
+  
+    .anterior{
+      color: $second-color; 
+      margin-top: 3px;
+      font-size: 20px;
+      transform: scaleX(-1);
+
+    }
+  
+    .proximo {
+      color: $second-color; // Mantenha a cor desejada
+      margin-top: 3px;
+      margin-left: 3px;
+      font-size: 20px;
+    }
+    
+    .ponto {
+      width: 10px;
+      height: 10px;
+      background-color: gray; // Cor do círculo
+      border-radius: 50%; /* Define a forma do elemento como um círculo */
+      margin-top: 10px;
+    }
+    .subtitle_anterior {
+      margin-right: 30px;
+      h2 {
+        margin-left: 12px;
+      }
+    }
+    .subtitle_proximo {
+      margin-left: 30px;
+      h2 {
+        margin-right: 12px;
+      }
+    }
+}

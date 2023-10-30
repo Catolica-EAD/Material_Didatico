@@ -13,14 +13,16 @@
 }
 
 //Import of partials
+@import '../../src/scss/_partials/variables.scss';
 @import '../../src/scss/_partials/nav.scss';
 @import '../../src/scss/_partials/custom-h1.scss';
-@import '../../src/scss/_partials/variables.scss';
+@import '../../src/scss/_partials/link-page.scss';
+@import '../../src/scss/_partials/footer.scss';
 
 //Page import
 @import './pages/page1.scss';
 @import './pages/page2.scss';
-@import './pages/page3.css';
+//@import './pages/page3.scss';
 
 
 *{
@@ -92,7 +94,7 @@ body{
             margin-top: 10px;
             z-index: 3;
             text-decoration: none;
-            color: white;
+            color: $primary-color;
             font-size: 21px;
             
             h2{
@@ -104,6 +106,10 @@ body{
                 padding-left: 3px;
                 height: 20px;
                 border-right: 3px solid $primary-color;
+            }
+            .fa-play{
+                margin-left: 3px;
+                color: $primary-color;
             }
         }
     }
@@ -167,12 +173,13 @@ body{
             margin-top: 10px;
             z-index: 3;
             text-decoration: none;
-            color: white;
+            color: $primary-color;
             font-size: 15px;
             
             h2{
                 margin-right: 10px;
                 font-family: $subtitle;
+
             }
             span{
                 padding-left: 3px;
